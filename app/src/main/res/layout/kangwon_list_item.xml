@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="80dp"
+            android:layout_height="330dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_launcher_background" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_data_bak_menu_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="백반1"
+                android:layout_margin="5dp"
+                />
+            <TextView
+                android:id="@+id/tv_data_bak_menu_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="백반2"
+                android:layout_margin="5dp"
+                />
+            <TextView
+                android:id="@+id/tv_data_sp_menu_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="특1"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_data_sp_menu_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="특2"
+                android:layout_margin="5dp"
+                />
+            <TextView
+                android:id="@+id/tv_data_dup_menu_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="덮1"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_data_dup_menu_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="덮2"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_data_dup_menu_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="덮3"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_data_dup_menu_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="덮4"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="요일"
+                android:layout_margin="5dp"
+                />
+            <TextView
+                android:id="@+id/tv_data_bak_tickets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="백반판매량"
+                android:layout_margin="5dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_data_dup_tickets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="덮밥판매량"
+                android:layout_margin="5dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
