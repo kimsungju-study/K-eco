@@ -3,7 +3,6 @@ package com.example.firebaseregister2;
 public class Kangwon {
     private String profile;
     private String data_bak_menu_1;
-    private String data_bak_menu_2;
     private int data_bak_tickets;
     private int data_bup_tickets;
     private String data_dup_menu_1;
@@ -15,7 +14,8 @@ public class Kangwon {
     private int foodwaste;
     private String day;
 
-    public Kangwon() {}
+    private String date;
+
 
     public String getProfile() {
         return profile;
@@ -31,14 +31,6 @@ public class Kangwon {
 
     public void setData_bak_menu_1(String data_bak_menu_1) {
         this.data_bak_menu_1 = data_bak_menu_1;
-    }
-
-    public String getData_bak_menu_2() {
-        return data_bak_menu_2;
-    }
-
-    public void setData_bak_menu_2(String data_bak_menu_2) {
-        this.data_bak_menu_2 = data_bak_menu_2;
     }
 
     public int getData_bak_tickets() {
@@ -120,4 +112,10 @@ public class Kangwon {
     public void setDay(String day) {
         this.day = day;
     }
+
+    public String getDate() {return date;}
+
+    public void setDate(String date) {this.date = date;}
+
+
 }

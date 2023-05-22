@@ -34,13 +34,13 @@ public class CustomAdapter2 extends RecyclerView.Adapter<CustomAdapter2.CustomVi
     //각 아이템에 대한 매칭
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
-        Glide.with(holder.itemView)
-                .load(kList.get(position).getProfile())
-                .into(holder.iv_profile);
+        // Null 체크를 추가하여 NullPointerException 예방
+        if (kList != null && position < kList.size()) {
+            Glide.with(holder.itemView)
+                    .load(kList.get(position).getProfile())
+                    .into(holder.iv_profile);
 
-        if (kList != null) {
             holder.tv_data_bak_menu_1.setText(kList.get(position).getData_bak_menu_1());
-            holder.tv_data_bak_menu_2.setText(kList.get(position).getData_bak_menu_2());
             holder.tv_data_bak_tickets.setText(String.valueOf(kList.get(position).getData_bak_tickets()));
 
             holder.tv_data_dup_menu_1.setText(kList.get(position).getData_dup_menu_1());
@@ -53,6 +53,7 @@ public class CustomAdapter2 extends RecyclerView.Adapter<CustomAdapter2.CustomVi
             holder.tv_data_sp_menu_2.setText(kList.get(position).getData_sp_menu_2());
             holder.tv_foodwaste.setText(String.valueOf(kList.get(position).getFoodwaste()));
             holder.tv_day.setText(kList.get(position).getDay());
+            holder.tv_date.setText(kList.get(position).getDate());
         }
     }
 
@@ -81,22 +82,23 @@ public class CustomAdapter2 extends RecyclerView.Adapter<CustomAdapter2.CustomVi
 
         TextView tv_foodwaste;
         TextView tv_day;
+        TextView tv_date;
 
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
             this.iv_profile = itemView.findViewById(R.id.iv_profile);
             this.tv_data_bak_menu_1 = itemView.findViewById(R.id.tv_data_bak_menu_1);
-            this.tv_data_bak_menu_2 = itemView.findViewById(R.id.tv_data_bak_menu_2);
             this.tv_data_dup_menu_1 = itemView.findViewById(R.id.tv_data_dup_menu_1);
             this.tv_data_dup_menu_2 = itemView.findViewById(R.id.tv_data_dup_menu_2);
             this.tv_data_dup_menu_3 = itemView.findViewById(R.id.tv_data_dup_menu_3);
             this.tv_data_dup_menu_4 = itemView.findViewById(R.id.tv_data_dup_menu_4);
             this.tv_data_sp_menu_1 = itemView.findViewById(R.id.tv_data_sp_menu_1);
-            this.tv_data_sp_menu_1 = itemView.findViewById(R.id.tv_data_sp_menu_1);
+            this.tv_data_sp_menu_2 = itemView.findViewById(R.id.tv_data_sp_menu_2);
             this.tv_data_bak_tickets = itemView.findViewById(R.id.tv_data_bak_tickets);
             this.tv_data_dup_tickets = itemView.findViewById(R.id.tv_data_dup_tickets);
+            this.tv_foodwaste = itemView.findViewById(R.id.tv_foodwaste);
             this.tv_day = itemView.findViewById(R.id.tv_day);
-
+            this.tv_date = itemView.findViewById(R.id.tv_date);
 
         }
     }

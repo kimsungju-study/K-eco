@@ -1,38 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical">
-
-<TextView
-    android:id="@+id/selected_date_text"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:text="날짜를 선택하세요"
-    android:textAppearance="?android:textAppearanceMedium" />
-
-<CalendarView
-    android:id="@+id/calendar_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_weight="1" />
+    android:orientation="vertical">
 
-<EditText
-    android:id="@+id/memo_edit_text"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="메모를 입력하세요"
-    android:inputType="text"
-    android:lines="5"
-    android:maxLines="10"
-    android:minLines="5"
-    android:padding="10dp" />
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-<Button
-    android:id="@+id/save_button"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="저장" />
+    <EditText
+        android:id="@+id/codeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter data code" />
+
+    <Button
+        android:id="@+id/retrieveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retrieve Data" />
+
+    <TextView
+        android:id="@+id/displayTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
 
 </LinearLayout>

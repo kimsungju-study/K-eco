@@ -10,7 +10,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,91 +37,93 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button button1 = (Button) findViewById(R.id.button1) ;
+
+        TextView txtAffiliation = findViewById(R.id.txt_affiliation);
+
+        // Get the currently logged-in user
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser != null) {
+            // Retrieve the UserAccount object from Firebase Realtime Database
+            DatabaseReference userRef = FirebaseDatabase.getInstance().getReference()
+                    .child("UserAccount")
+                    .child(currentUser.getUid());
+            userRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        UserAccount userAccount = dataSnapshot.getValue(UserAccount.class);
+                        if (userAccount != null) {
+                            String affiliation = userAccount.getAffiliation();
+                            txtAffiliation.setText(affiliation);
+                        }
+                    }
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                    Log.d("MainActivity", "Failed to retrieve affiliation: " + databaseError.getMessage());
+                }
+            });
+        }
+        Button button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, test2.class) ;
+                Intent intent = new Intent(MainActivity.this, test2.class);
 
-                startActivity(intent) ;
+                startActivity(intent);
             }
         });
 
-        Button button2 = (Button) findViewById(R.id.button2) ;
+        Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, test1.class) ;
+                Intent intent = new Intent(MainActivity.this, test1.class);
 
-                startActivity(intent) ;
+                startActivity(intent);
             }
         });
 
-        Button button3 = (Button) findViewById(R.id.button3) ;
+        Button button3 = (Button) findViewById(R.id.button3);
         button3.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, test3.class) ;
+                Intent intent = new Intent(MainActivity.this, test3.class);
 
-                startActivity(intent) ;
+                startActivity(intent);
             }
         });
 
-        Button button4 = (Button) findViewById(R.id.button4) ;
+        Button button4 = (Button) findViewById(R.id.button4);
         button4.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Test4CalenderActivity.class) ;
+                Intent intent = new Intent(MainActivity.this, Test4CalenderActivity.class);
 
-                startActivity(intent) ;
+                startActivity(intent);
             }
         });
 
-
-        recyclerView = findViewById(R.id.recyclerView);//아이디 연결
-        recyclerView.setHasFixedSize(true);//성능강화
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-        arrayList = new ArrayList<>();//User 객체 담는 배열리스트-> 어댑터 쪽으로
-
-        database = FirebaseDatabase.getInstance();//파이어베이스 데이터 연동
-
-        databaseReference = database.getReference("User"); //데이터베이스 테이블 연결
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+        Button button5 = (Button) findViewById(R.id.button5);
+        button5.setOnClickListener(new Button.OnClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //파이어베이스 데이터 베이스 받아오는 부분
-                arrayList.clear();// 기존 배열 리스트가 존재하지 못하게 초기화
-                for(DataSnapshot snapshot : dataSnapshot.getChildren()){// 반복문을 통하여 데이터list 추출
-                    User user = snapshot.getValue(User.class);//만들어둔 user 객체에 데이터 삽입
-                    arrayList.add(user);// 담은 데이터들을 배열리스트에 넣고 리사이클러뷰에 보낼 준비
-                }
-                adapter.notifyDataSetChanged();// 리스트저장 후 새로고침
-            }
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CheckList.class);
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                    //데이터 가져오는 중 에러코드
-                Log.e("MainActivity", String.valueOf(databaseError.toException()));//에러 출력
+                startActivity(intent);
             }
         });
 
-        adapter = new CustomAdapter(arrayList, this);
-        recyclerView.setAdapter(adapter);//리사이클 뷰에 어탭터 연결
+        Button button6 = (Button) findViewById(R.id.button6);
+        button6.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CalenderActivity.class);
 
+                startActivity(intent);
+            }
+        });
     }
-/*
-    public void goToTest1(View view) {
-        Intent intent = new Intent(this, test1.class);
-        startActivity(intent);
-    }
-
-    public void goToTest2(View view) {
-        Intent intent = new Intent(this, test2.class);
-        startActivity(intent);
-    }
-*/
-
-
-
 }
