@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4F1E9"
     android:orientation="vertical"
     tools:context=".CalenderActivity">
 
@@ -11,20 +10,34 @@
         android:id="@+id/txt_affiliation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
-        />
+        android:textAppearance="?android:textAppearanceMedium" />
+    <!-- Apply the desired font using android:fontFamily -->
 
     <!-- Calendar View -->
     <CalendarView
         android:id="@+id/calendarView"
+        style="@android:style/Widget.Material.Light.CalendarView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp" />
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="1"
+        android:background="#F4F1E9"
+        android:backgroundTint="#F4F1E9"
+        android:dateTextAppearance="@style/TextAppearance.AppCompat.Large"
+        android:focusedMonthDateColor="#F4F1E9"
+        android:fontFamily="sans-serif-light"
+        android:foregroundTint="@color/black"
+        android:scrollbarThumbHorizontal="@color/black"
+        android:visibility="visible"
+        android:weekNumberColor="@color/black"
+        tools:visibility="visible" />
+    <!-- Apply the desired font using android:fontFamily -->
 
     <!-- Data Display -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <TextView
             android:id="@+id/dataTextView"
@@ -32,8 +45,10 @@
             android:layout_height="wrap_content"
             android:maxLines="100"
             android:scrollbars="vertical" />
+        <!-- Apply the desired font using android:fontFamily -->
 
     </ScrollView>
+
 
 
 </LinearLayout>

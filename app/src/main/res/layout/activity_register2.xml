@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txt_affiliation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="" />
+
+
+            <EditText
+                android:id="@+id/editText_data_bak_menu_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="덮밥메뉴" />
+
+            <EditText
+                android:id="@+id/editText_data_bak_tickets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="덮밥티켓 판매량"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editText_data_dup_menu_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="백반메뉴(밥) " />
+
+            <EditText
+                android:id="@+id/editText_data_dup_menu_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="백반메뉴(국)" />
+
+            <EditText
+                android:id="@+id/editText_data_dup_menu_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="백반메뉴(메인반찬)" />
+
+            <EditText
+                android:id="@+id/editText_data_dup_menu_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="백반메뉴(저녁)" />
+
+            <EditText
+                android:id="@+id/editText_data_dup_tickets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="백반티켓 수량"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editText_data_sp_menu_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="특선메뉴(점심)" />
+
+            <EditText
+                android:id="@+id/editText_data_sp_menu_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="특선메뉴(저녁)" />
+
+            <EditText
+                android:id="@+id/editText_data_sp_tickets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="특선티켓 수량"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editText_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="날짜" />
+
+
+            <EditText
+                android:id="@+id/editText_foodwaste"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="음식물쓰레기 배출량"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="저장하기" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

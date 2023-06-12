@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16sp"
+    tools:context=".RestApi3">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/dateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:inputType="textMultiLine"
+                android:hint="날짜" />
+
+            <EditText
+                android:id="@+id/dayEditText"
+                android:layout_width="match_parent"
+                android:layout_below="@id/dateEditText"
+
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:inputType="textMultiLine"
+                android:hint="요일" />
+
+            <EditText
+                android:id="@+id/dupMenuEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/dayEditText"
+                android:layout_marginTop="16dp"
+                android:inputType="textMultiLine"
+                android:hint="백반메뉴(밥)" />
+
+            <EditText
+                android:id="@+id/dupMenuEditText2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/dupMenuEditText"
+                android:layout_marginTop="16dp"
+                android:inputType="textMultiLine"
+                android:hint="백반메뉴(국)" />
+
+            <EditText
+                android:id="@+id/dupMenuEditText3"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/dupMenuEditText2"
+                android:layout_marginTop="16dp"
+                android:inputType="textMultiLine"
+                android:hint="백반메뉴(메인반찬)" />
+
+            <EditText
+                android:id="@+id/dupMenuEditText4"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/dupMenuEditText3"
+                android:layout_marginTop="16dp"
+                android:inputType="textMultiLine"
+                android:hint="백반메뉴(저녁백반)" />
+            <EditText
+                android:id="@+id/dupMenuEditText5"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/dupMenuEditText4"
+                android:layout_marginTop="16dp"
+                android:inputType="textMultiLine"
+                android:hint="백반메뉴(저녁백반2)" />
+            <EditText
+                android:id="@+id/dupMenuEditText6"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/dupMenuEditText5"
+                android:layout_marginTop="16dp"
+                android:inputType="textMultiLine"
+                android:hint="백반메뉴(저녁백반3)" />
+
+            <EditText
+                android:id="@+id/spMenu1EditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/dupMenuEditText6"
+                android:layout_marginTop="16dp"
+                android:inputType="textMultiLine"
+                android:hint="점심 특선메뉴" />
+
+            <EditText
+                android:id="@+id/spMenu2EditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/spMenu1EditText"
+                android:layout_marginTop="16dp"
+                android:inputType="textMultiLine"
+                android:hint="저녁 특선메뉴" />
+
+            <EditText
+                android:id="@+id/bakMenu1EditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/spMenu2EditText"
+                android:layout_marginTop="16dp"
+                android:inputType="textMultiLine"
+                android:hint="덮밥메뉴" />
+
+            <Button
+                android:id="@+id/sendRequestButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bakMenu1EditText"
+                android:layout_marginTop="16dp"
+                android:text="예측값불러오기" />
+
+            <TextView
+                android:id="@+id/responseTextView"
+                android:layout_width="176dp"
+                android:layout_height="87dp"
+                android:layout_below="@id/sendRequestButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="73dp"
+                android:text="@string/restapi1"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

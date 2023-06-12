@@ -4,7 +4,8 @@ public class Kangwon {
     private String profile;
     private String data_bak_menu_1;
     private int data_bak_tickets;
-    private int data_bup_tickets;
+    private int data_dup_tickets;
+    private int data_sp_tickets;
     private String data_dup_menu_1;
     private String data_dup_menu_2;
     private String data_dup_menu_3;
@@ -13,9 +14,7 @@ public class Kangwon {
     private String data_sp_menu_2;
     private int foodwaste;
     private String day;
-
     private String date;
-
 
     public String getProfile() {
         return profile;
@@ -37,16 +36,27 @@ public class Kangwon {
         return data_bak_tickets;
     }
 
+
+
+
     public void setData_bak_tickets(int data_bak_tickets) {
         this.data_bak_tickets = data_bak_tickets;
     }
 
-    public int getData_bup_tickets() {
-        return data_bup_tickets;
+    public int getData_sp_tickets() {
+        return data_sp_tickets;
     }
 
-    public void setData_bup_tickets(int data_bup_tickets) {
-        this.data_bup_tickets = data_bup_tickets;
+    public void setData_sp_tickets(int data_sp_tickets) {
+        this.data_sp_tickets = data_sp_tickets;
+    }
+
+    public int getData_dup_tickets() {
+        return data_dup_tickets;
+    }
+
+    public void setData_dup_tickets(int data_dup_tickets) {
+        this.data_dup_tickets = data_dup_tickets;
     }
 
     public String getData_dup_menu_1() {
@@ -113,9 +123,11 @@ public class Kangwon {
         this.day = day;
     }
 
-    public String getDate() {return date;}
+    public String getDate() {
+        return date;
+    }
 
-    public void setDate(String date) {this.date = date;}
-
-
+    public void setDate(String date) {
+        this.date = date;
+    }
 }

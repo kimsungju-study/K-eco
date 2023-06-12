@@ -1,5 +1,42 @@
 <resources>
     <string name="app_name">firebaseRegister2</string>
     <string name="app_name2">테스트</string>
+    <string name="restapi1">restapi데이터 출력</string>
+    <string name="regwpahr">회원 가입</string>
+    <string name="reg_e">이메일</string>
+    <string name="reg_t_e">이름</string>
+    <string name="reg_et_hint">이름을 입력해주세요.</string>
+    <string name="reg_inf">회원정보</string>
+    <string name="reg_ps_T">비밀번호</string>
+    <string name="reg_ps_et_hint">비밀번호를 입력해주세요.</string>
+    <string name="reg_e_hint">이메일을 입력해주세요.</string>
+    <string name="reg_t">소속</string>
+    <string name="reg_g">소속을 입력해주세요</string>
+    <string name="reg_b_suc">가입완료</string>
+    <string name="log_hint_t">아이디를 입력해 주세요</string>
+    <string name="log_logo">Coover</string>
+    <string name="log_b_reg">회원가입</string>
+    <string name="log_t">로그인</string>
+    <string name="log_ps_T">비밀번호를 입력해 주세요</string>
+    <string name="log_b_log">로그인</string>
+    <string name="list_bak1">백반1</string>
+    <string name="list_special1">특1</string>
+    <string name="list_special2">특2</string>
+    <string name="list_rice1">덮1</string>
+    <string name="list_rice2">덮2</string>
+    <string name="list_rice3">덮3</string>
+    <string name="list_rice4">덮4</string>
+    <string name="list_bak_sell">백반판매량</string>
+    <string name="list_rice_Sell">덮밥판매량</string>
+    <string name="list_trash">음쓰량</string>
+    <string name="list_day">요일</string>
+    <string name="list_date">년/월/일</string>
+    <string name="main_cal">달력수정</string>
+    <string name="test_api">테스트1_restapi</string>
+    <string name="img_todo">TODO</string>
+    <string name="list_todo">TODO</string>
+    <string name="main_restapi_b">restapi</string>
+    <string name="img_small_log">TODO</string>
+    <string name="main_trans_b">수정</string>
 
 </resources>

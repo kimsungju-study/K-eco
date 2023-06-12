@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
 
 
         <ImageView
@@ -14,66 +16,82 @@
             android:layout_width="80dp"
             android:layout_height="330dp"
             android:layout_margin="5dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:textSize="34sp"
+            android:src="@drawable/ic_launcher_background"
+            android:contentDescription="@string/list_todo" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tv_data_bak_menu_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="백반1"
+                android:text="@string/list_bak1"
                 android:layout_margin="5dp"
+                android:textSize="34sp"
+
                 />
             <TextView
                 android:id="@+id/tv_data_sp_menu_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="특1"
+                android:text="@string/list_special1"
                 android:layout_margin="5dp"
+                android:textSize="34sp"
+
                 />
 
             <TextView
                 android:id="@+id/tv_data_sp_menu_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="특2"
+                android:text="@string/list_special2"
                 android:layout_margin="5dp"
+                android:textSize="34sp"
+
                 />
             <TextView
                 android:id="@+id/tv_data_dup_menu_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="덮1"
+                android:text="@string/list_rice1"
                 android:layout_margin="5dp"
+                android:textSize="34sp"
+
                 />
 
             <TextView
                 android:id="@+id/tv_data_dup_menu_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="덮2"
+                android:text="@string/list_rice2"
                 android:layout_margin="5dp"
+                android:textSize="34sp"
+
                 />
 
             <TextView
                 android:id="@+id/tv_data_dup_menu_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="덮3"
+                android:text="@string/list_rice3"
                 android:layout_margin="5dp"
+                android:textSize="34sp"
+
                 />
 
             <TextView
                 android:id="@+id/tv_data_dup_menu_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="덮4"
+                android:text="@string/list_rice4"
                 android:layout_margin="5dp"
+                android:textSize="34sp"
+
                 />
 
 
@@ -81,8 +99,10 @@
                 android:id="@+id/tv_data_bak_tickets"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="백반판매량"
+                android:text="@string/list_bak_sell"
                 android:layout_margin="5dp"
+                android:textSize="34sp"
+
                 />
 
 
@@ -90,32 +110,40 @@
                 android:id="@+id/tv_data_dup_tickets"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="덮밥판매량"
+                android:text="@string/list_rice_Sell"
                 android:layout_margin="5dp"
+                android:textSize="34sp"
+
                 />
 
             <TextView
                 android:id="@+id/tv_foodwaste"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="음쓰량"
+                android:text="@string/list_trash"
                 android:layout_margin="5dp"
+                android:textSize="34sp"
+
                 />
 
             <TextView
                 android:id="@+id/tv_day"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="요일"
+                android:text="@string/list_day"
                 android:layout_margin="5dp"
+                android:textSize="34sp"
+
                 />
 
             <TextView
                 android:id="@+id/tv_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="년/월/일"
+                android:text="@string/list_date"
                 android:layout_margin="5dp"
+                android:textSize="34sp"
+
                 />
         </LinearLayout>
     </LinearLayout>

@@ -1,22 +1,21 @@
 package com.example.firebaseregister2;
 
 public class UserAccount {
+
     private String idToken;
     private String emailId;
     private String password;
     private String affiliation; // Added affiliation field
 
+    private String name; // Added affiliation field
+
+
+
     // Default constructor
     public UserAccount() {
     }
 
-    // Getters and setters for idToken, emailId, password, and affiliation
-    public String getIdToken() {
-        return idToken;
-    }
-
-    public void setIdToken(String idToken) {
-        this.idToken = idToken;
+    public void setIdToken(String idToken) {this.idToken = idToken;
     }
 
     public String getEmailId() {
@@ -41,5 +40,12 @@ public class UserAccount {
 
     public void setAffiliation(String affiliation) {
         this.affiliation = affiliation;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
