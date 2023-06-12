@@ -1,6 +1,6 @@
 ## K-eco
 
-강원대학교 밴처캡스톤디자인 4학년 K-eco팀의 자료입니다
+강원대학교 밴처캡스톤디자인 K-eco팀의 자료입니다
 ---
 + ### 발표자료 
   + ppt : [캡스톤 (1).pdf](https://github.com/kimsungju-study/K-eco/files/11720616/1.pdf)
